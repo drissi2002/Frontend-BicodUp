@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.full-width{
+   width :100% 
+}
+.reponsive{
+   max-width: 100%;
+}
+
+h1 , h2 , button ,p{
+   font-family: 'Poppins', sans-serif !important;
+
+}

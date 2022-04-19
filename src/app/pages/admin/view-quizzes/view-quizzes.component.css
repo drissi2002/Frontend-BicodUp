@@ -1,0 +1,8 @@
+.example-header-image {
+    background-image: url('../../../../assets/quiz.png');
+    background-size: cover;
+  }
+
+  .stylefont , h2 , button{
+    font-family: 'Poppins', sans-serif !important;
+}

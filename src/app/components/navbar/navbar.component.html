@@ -1,0 +1,26 @@
+
+<mat-toolbar color="primary">
+    <a routerLink="/" mat-icon-button class="example-icon " aria-label="Example icon-button with menu icon">
+      <mat-icon>laptop_chromebook</mat-icon>
+    </a>
+    <a href="/"> <span><img class="reponsive1 mt10"src="/assets/logoun.png" alt=""/></span></a>
+    <span class="example-spacer"></span>
+    
+    <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with login">
+        Login
+      <mat-icon>login</mat-icon>
+    </a>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/signup'" mat-icon-button class="example-icon mr40 ml20" aria-label="Example icon-button with registartion">
+        Register
+      <mat-icon>app_registration</mat-icon>
+    </a>
+
+    <button routerLink="/admin/profile" *ngIf="isLoggedIn && user"  mat-icon-button class="example-icon mr40 ml20" aria-label="Example icon-button with login">
+    {{ login.getUser().username }}
+    </button>
+
+    <a (click)="logout()"  *ngIf="isLoggedIn"  mat-icon-button class="example-icon mr40 ml20" aria-label="Example icon-button with logout">
+      Logout
+    <mat-icon>logout</mat-icon>
+  </a>
+  </mat-toolbar>
