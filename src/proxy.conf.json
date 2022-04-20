@@ -1,0 +1,6 @@
+{
+    "/category": {
+    "target": "http://localhost:8010",
+    "secure": false
+    }
+    }
