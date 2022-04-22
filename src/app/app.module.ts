@@ -42,6 +42,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.component';
 
+import{SidebarComponent as UserSidebar} from './pages/user/sidebar/sidebar.component';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,11 +62,14 @@ import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.com
     AddCategoryComponent,
     ViewQuizzesComponent,
     AddQuizComponent,
+
     UpdateQuizComponent,
     AddQuestionComponent,
     ViewQuizQuestionsComponent,
     LoadQuizComponent,
     SidebarUserComponent,  
+    UpdateQuizComponent,  
+    UserSidebar, LoadQuizComponent
   ],
   imports: [
     BrowserModule,
