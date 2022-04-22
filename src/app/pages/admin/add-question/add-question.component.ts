@@ -25,7 +25,7 @@ export class AddQuestionComponent implements OnInit {
     option4:'',
     answer:'',
     quiz:{
-      idq:''
+      qId:''
     }
   };
   
@@ -38,7 +38,7 @@ export class AddQuestionComponent implements OnInit {
   ngOnInit(): void {
     this.idquiz= this._route.snapshot.params['idquiz'];
     this.qTitle= this._route.snapshot.params['title'];
-    this.question.quiz['idq'] = this.idquiz;
+    this.question.quiz['qId'] = this.idquiz;
     console.log(this.idquiz);
   
   }

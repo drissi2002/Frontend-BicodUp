@@ -18,23 +18,39 @@ catId:any;
   
 
   ngOnInit(): void {
-    this.catId=this._route.snapshot.params['catId'];
-  
-  if(this.catId==0){
-    console.log("load all the quiz");
-    this._quiz.quizzes().subscribe(
-      (data:any)=>{
-        this.quizzes=data;
-        console.log(this.quizzes);
-      },
-      (error)=>{
-        console.log(error);
-        alert("error in loading quizzes");
-      }
-    );
-  }else{
-    console.log("load specific quiz")
-  }
+
+    this._route.params.subscribe(
+      (params)=>{
+        this.catId=params['catId'];        
+
+        if(this.catId==0){
+          console.log("load all the quiz");
+          this._quiz.quizzes().subscribe(
+            (data:any)=>{
+              this.quizzes=data;
+              console.log(this.quizzes);
+            },
+            (error)=>{
+              console.log(error);
+              alert("error in loading quizzes");
+            }
+          );
+        }else{
+          console.log("load specific quiz")
+          this._quiz.getQuizzesOfCategory(this.catId).subscribe(
+            (data:any)=>{
+              this.quizzes=data;
+              console.log(this.quizzes);
+            },
+            (error)=>{
+              alert("error in loading quiz data");
+            }
+          );
+        }
+      
+      });
+
+
   }
 
 }

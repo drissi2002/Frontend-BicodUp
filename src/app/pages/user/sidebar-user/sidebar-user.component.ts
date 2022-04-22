@@ -8,7 +8,6 @@ import { CategoryService } from 'src/app/services/category.service';
   styleUrls: ['./sidebar-user.component.css']
 })
 export class SidebarUserComponent implements OnInit {
-
   categories:any;
   constructor(private _cat:CategoryService,private _snack:MatSnackBar) {
     
@@ -25,5 +24,6 @@ this._snack.open('Error in loading categories from server','',{
   }
 );
   }
+
 
 }

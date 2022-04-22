@@ -79,12 +79,15 @@ const routes: Routes = [
   {
     path:'user-dashboard',
     component:UserDashboardComponent,
-    
     canActivate:[NormalGuard],
     children:[{
       path:':catId',
       component:LoadQuizComponent
-    }]
+    }
+  
+  
+  
+  ]
   }
 ];
 
