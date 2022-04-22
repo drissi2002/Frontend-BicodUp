@@ -1,6 +1,4 @@
-.w100{
-    width: 100%;
-}
-h2 , button{
+h1 , h2 , button ,p{
     font-family: 'Poppins', sans-serif !important;
+
 }

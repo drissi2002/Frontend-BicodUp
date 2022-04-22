@@ -7,17 +7,17 @@ import basUrl from './helper';
 })
 export class QuizService {
      
-  /*addQuiz(question: { 
+  public addQuestionQuiz(question: { 
        quiz: {}; 
        content: string; 
        option1: string; 
        option2: string;
        option3: string;
        option4: string;
-       answer: string; })*/
-  /*{
+       answer: string; })
+  {
     throw new Error('Method not implemented.');
-  }*/
+  }
 
   constructor(private _http:HttpClient) {}
     public quizzes(){
