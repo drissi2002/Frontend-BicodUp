@@ -8,16 +8,14 @@ import { QuizService } from 'src/app/services/quiz.service';
   styleUrls: ['./load-quiz.component.css']
 })
 export class LoadQuizComponent implements OnInit {
-
-constructor() { }
-
-  ngOnInit(): void {
-=======
-  catId:any;
+catId:any;
   quizzes:any;
   constructor(
     private _route: ActivatedRoute,private _quiz:QuizService)
    { }
+
+  
+  
 
   ngOnInit(): void {
     this.catId=this._route.snapshot.params['catId'];
