@@ -36,6 +36,11 @@ import { AddCategoryComponent } from './pages/admin/add-category/add-category.co
 import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
 import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.component';
 
 import{SidebarComponent as UserSidebar} from './pages/user/sidebar/sidebar.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
@@ -57,6 +62,12 @@ import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
     AddCategoryComponent,
     ViewQuizzesComponent,
     AddQuizComponent,
+
+    UpdateQuizComponent,
+    AddQuestionComponent,
+    ViewQuizQuestionsComponent,
+    LoadQuizComponent,
+    SidebarUserComponent,  
     UpdateQuizComponent,  
     UserSidebar, LoadQuizComponent
   ],
@@ -77,6 +88,7 @@ import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
     MatListModule,
     MatSlideToggleModule,
     MatSelectModule,
+    CKEditorModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
