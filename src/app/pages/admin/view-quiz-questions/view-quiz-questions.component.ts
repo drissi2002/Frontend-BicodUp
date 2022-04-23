@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuestionService } from 'src/app/services/question.service';
+
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
 
@@ -14,6 +15,7 @@ export class ViewQuizQuestionsComponent implements OnInit {
   idquiz:any;
   qTitle:any ;
   questions:any =[ 
+
   {content:'question One ?',
   option1:'a ',
   option2:'b',
@@ -21,10 +23,11 @@ export class ViewQuizQuestionsComponent implements OnInit {
   option4:'d',
   answer:'b'
   },{content:'question Two ?',
-  option1:'a ',
-  option2:'b',
-  option3:'c',
-  option4:'d',
+
+  answer:'Manel'
+  }];
+
+
   answer:'a'
   }];
 
@@ -36,17 +39,20 @@ export class ViewQuizQuestionsComponent implements OnInit {
   ngOnInit(): void {
     this.idquiz=this._route.snapshot.params['idquiz'];
     this.qTitle=this._route.snapshot.params['title'];
+
     this._question.getQuestionOfQuiz(this.idquiz).subscribe((data)=>{
       console.log(data);
       this.questions= data;
     },
     (error) =>{
       console.log(error);
+
     });
   }
   //delete question
 
   deleteQuestion(idquiz:any){
+
     Swal.fire({
       icon:'info',
       showCancelButton:true,
@@ -66,6 +72,7 @@ export class ViewQuizQuestionsComponent implements OnInit {
              duration:3000,
            })
          });
+
          
         // console.log(error);
       }

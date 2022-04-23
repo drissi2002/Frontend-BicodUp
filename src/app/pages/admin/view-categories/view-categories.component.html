@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 <mat-card class="stylefont mb20">
     <h2 mat-subheader>All Categories details</h2>
 
     <mat-list>
         <mat-list-item class="stylefont" *ngFor="let c of categories">
+=======
+<mat-card>
+    <mat-list>
+        <div mat-subheader>All Categories</div>
+        <mat-list-item *ngFor="let c of categories">
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
             <mat-icon mat-list-icon>category</mat-icon>
             <div mat-line>{{c.title}}</div>
             <div mat-line>{{c.description}}</div>
@@ -10,6 +17,10 @@
         </mat-list-item>
     </mat-list>
     <div class="container text-center mt20">
+<<<<<<< HEAD
         <button routerLink="/admin/add-category" mat-raised-button color="accent"> Add new Category</button>
+=======
+        <button routerLink="/admin/add-category" mat-raised-button color="accent"> ADD new Category</button>
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
     </div>
 </mat-card>

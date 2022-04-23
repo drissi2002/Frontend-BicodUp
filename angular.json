@@ -3,7 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bicodupfront": {
+
+    "bicodup-front": {
+
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +19,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bicodupfront",
+
+            "outputPath": "dist/bicodup-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +73,14 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bicodupfront:build:production"
+
+              "browserTarget": "bicodup-front:build:production"
             },
             "development": {
-              "browserTarget": "bicodupfront:build:development"
+              "browserTarget": "bicodup-front:build:development", 
+              "proxyConfig": "src/proxy.conf.json"
+
+
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bicodupfront:build"
+            "browserTarget": "bicodup-front:build"
           }
         },
         "test": {
@@ -105,5 +112,7 @@
       }
     }
   },
-  "defaultProject": "bicodupfront"
+
+  "defaultProject": "bicodup-front"
+
 }

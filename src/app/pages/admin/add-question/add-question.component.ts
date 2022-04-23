@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { QuestionService } from 'src/app/services/question.service';
 import { QuizService } from 'src/app/services/quiz.service';
 import Swal from 'sweetalert2';
+
+import { QuestionService } from 'src/app/services/question.service';
+
+
+
 
 @Component({
   selector: 'app-add-question',
@@ -12,18 +16,36 @@ import Swal from 'sweetalert2';
 export class AddQuestionComponent implements OnInit {
 
 
+  idquiz:any;
+  qTitle:any;
 
-
-  idquiz='';
-  qTitle='';
   question={
     content:'',
     image:'',
+
     option1:'',
     option2:'',
     option3:'',
     option4:'',
+    
     answer:'',
+    quiz:{qId:''}
+
+  };
+  /*
+  constructor(
+    private _route:ActivatedRoute,
+    private _quiz:QuizService,
+    ) { }*/
+
+  ngOnInit(): void {/*
+    this.idquiz= this._route.snapshot.params.idquiz;
+    this.qTitle= this._route.snapshot.params.title;
+    this.question.quiz['idquiz'] = this.idquiz;
+    */
+  }
+  formSubmit(){/*
+
     quiz:{
       qId:''
     }
@@ -41,8 +63,9 @@ export class AddQuestionComponent implements OnInit {
     this.question.quiz['qId'] = this.idquiz;
     console.log(this.idquiz);
   
-  }
+  }*/
   formSubmit(){
+
     if(this.question.content.trim()==''|| this.question.content==null)
     {
       return ;
@@ -60,6 +83,10 @@ export class AddQuestionComponent implements OnInit {
       return ;
     }
     //form submit
+
+    
+    
+
     console.log(this.idquiz);
 
     this._question.addQuestion(this.question).subscribe (
@@ -78,7 +105,10 @@ export class AddQuestionComponent implements OnInit {
       (error:any)=>{
         Swal.fire('Error','Error in adding question','error');
       }
-    );
+
+    );*/
+
+   
   }
 
 }

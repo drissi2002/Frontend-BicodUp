@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { LoginService } from 'src/app/services/login.service';
+=======
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
 
 @Component({
   selector: 'app-profile',
@@ -7,6 +10,7 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+<<<<<<< HEAD
   user={ 
     "id":'', 
     "username": "", 
@@ -30,6 +34,14 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     //this.user=this.login.getUser();
     this.login.getCurrentUser().subscribe(
+=======
+user=null;
+  constructor() { }
+
+  ngOnInit(): void {
+   this.user=this.login.getUser();
+   this.login.getCurrentUser().subscribe(
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
       (user:any)=>{
         this.user=user;
       },
@@ -37,4 +49,8 @@ export class ProfileComponent implements OnInit {
     )
   }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
