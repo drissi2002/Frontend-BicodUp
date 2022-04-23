@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <mat-card class="mb20">
     <h2 class="ml10 mt10"> Add New Quiz</h2>
 
@@ -6,17 +7,48 @@
             <div class="col-md-8 offset-md-2">
 
                 <form (ngSubmit)="formSubmit()" > 
+=======
+<mat-card>
+    <h1> Add New Quiz</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+            
+                <form > <!--(ngSubmit)="addQuiz()" fi wost el form-->
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
 
                     <!-- title field -->
                     <mat-form-field class="w100" appearance="fill">
                         <mat-label>  Enter title </mat-label>
+<<<<<<< HEAD
                         <input [(ngModel)]="quizData.title" required type="text" name="title" placeholder="Enter here" matInput />
+=======
+                        <!--fi wost el input 7ot : [(ngModel)]="quizData.title" w zada required  -->
+                        <input 
+                        
+                        type="text" 
+                        name="title" 
+                        placeholder="Enter here" 
+                        matInput />
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
                     </mat-form-field>
 
                     <!-- description field -->
                     <mat-form-field class="w100" appearance="fill">
                         <mat-label>  Enter  description  </mat-label>
+<<<<<<< HEAD
                         <textarea [(ngModel)]="quizData.description" type="text" name="description" placeholder="Enter here" matInput rows="5" ></textarea>
+=======
+                        <!--fi wost el textarea 7ot : [(ngModel)]="quizData.description"  -->
+                        <textarea
+                           type="text" 
+                           name="description" 
+                           placeholder="Enter here" 
+                           matInput
+                           rows="5" >
+
+                        </textarea>
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
                     </mat-form-field>
 
                     <div class="row">
@@ -24,36 +56,68 @@
                             <!--//max marks --> 
                             <mat-form-field class="w100" appearance="fill">
                                 <mat-label>  Maximum marks  </mat-label>
+<<<<<<< HEAD
                                 <input [(ngModel)]="quizData.maxMarks" type="text" name="MaxMarks" placeholder="Enter here" matInput />
+=======
+                                <!--fi wost el input 7ot : [(ngModel)]="quizData.maxMarks"  -->
+                                <input type="text" name="MaxMarks" placeholder="Enter here" matInput />
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
                             </mat-form-field>
                         </div>
                         <div class="col-md-6">
                             <!--//number of question to be shown  --> 
                             <mat-form-field class="w100" appearance="fill">
                                 <mat-label>  Number of Question  </mat-label>
+<<<<<<< HEAD
                                 <input [(ngModel)]="quizData.numberOfQuestions" type="text" name="numberOfQuestion" placeholder="Enter here" matInput />
+=======
+                                <!--fi wost el input 7ot : [(ngModel)]="quizData.numberOfQuestion"  -->
+                                <input type="text" name="numberOfQuestion" placeholder="Enter here" matInput />
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
                             </mat-form-field>
                         </div>
                     </div>
 
                     <!-- active field -->
+<<<<<<< HEAD
                     <mat-slide-toggle name="active" activeclass="mt20"[checked]="false" [(ngModel)]="quizData.active">
+=======
+                    <!--fi wost el toggle 7ot : [(ngModel)]="quizData.active"  w na7i checked-->
+                    <mat-slide-toggle
+                    name=""active
+                     class="mt20"
+                     [checked]="false"
+                     >
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
                        Publish Status
                     </mat-slide-toggle>
                     <br/>
 
+<<<<<<< HEAD
                    <!-- //category select -->
                    <mat-form-field  appearance="fill" class="mt20 w100">
                     <mat-label>  Categories </mat-label>
                     <mat-select name="quizData" [(ngModel)]="quizData.category.cid"> 
                         <mat-option *ngFor="let c of categories" [value]="c.cid" >
+=======
+                   <!-- //catecory select -->
+                   <mat-form-field  appearance="fill" class="mt20 w100">
+                    <mat-label>  Categories </mat-label>
+                    <!--fi wost el mat-select 7ot : [(ngModel)]="quizData.catecory"  -->
+                    <mat-select name="quizData" >
+                        <mat-option *ngFor="let c of categories" [value]="c.cid"><!-- [ngValue]="c"-->
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
                             {{c.title}}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
 
                 <div class="container text-center">
+<<<<<<< HEAD
                     <button mat-raised-button color="accent" type="sumbit">Add New Quiz</button>
+=======
+                    <button mat-raised-button color="accent" type="sumbit">Add</button>
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
                 </div>
 
 
@@ -65,5 +129,10 @@
         </div>
     </div>
 </mat-card>
+<<<<<<< HEAD
 <!--{{categories| json}}-->
 <!--{{quizData | json}}-->
+=======
+<!--{{quizData | json}}-->
+
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1

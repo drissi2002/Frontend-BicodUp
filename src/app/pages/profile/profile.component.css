@@ -1,4 +1,5 @@
 .profile-image{
+<<<<<<< HEAD
     max-width :110px;
     max-height: 110px;
     border-radius: 50% ;
@@ -15,4 +16,19 @@
  h1 , h2 , button ,p{
     font-family: 'Poppins', sans-serif !important;
 
+=======
+   max-width :150px;
+   max-height: 150px;
+   border: 2px solid black;
+   border-radius: 50%
+}
+.table{
+    width: 100%;
+    
+}
+.table tr td{
+    padding :10px 15px;
+    border: 0.5px solid pink;
+    border-collapse: collapse
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
 }

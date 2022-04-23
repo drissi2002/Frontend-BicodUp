@@ -6,8 +6,12 @@ import basUrl from './helper';
   providedIn: 'root'
 })
 export class QuizService {
+
      
   /*addQuiz(question: { 
+
+     addQuiz(question: { 
+
        quiz: {}; 
        content: string; 
        option1: string; 
@@ -36,7 +40,6 @@ export class QuizService {
     //get the single quiz
     public getQuiz(idquiz: any ){
       return this._http.get(`${basUrl}/quiz/${idquiz}`);
-     
     }
 
     //update quiz
@@ -46,3 +49,4 @@ export class QuizService {
     }
 
 }
+

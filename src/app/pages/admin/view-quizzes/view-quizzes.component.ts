@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./view-quizzes.component.css']
 })
 export class ViewQuizzesComponent implements OnInit {
+<<<<<<< HEAD
   quizzes=[
     {
     qId: 41,
@@ -39,6 +40,34 @@ export class ViewQuizzesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+=======
+
+  quizzes=[
+    {idquiz:'23',
+    title:'java basic',
+    description:'java quiz basic description',
+    active:'',
+    nbrquestion:'10',
+    maxMarks:'50',
+    category:{
+      title:'programming'
+    }
+  },{idquiz:'25',
+  title:'java basic',
+  description:'java quiz basic description',
+  active:'',
+  nbrquestion:'10',
+  maxMarks:'50',
+  category:{
+    title:'programming'
+  }
+},
+]
+  /*constructor(private _quiz:QuizService) { 
+  }*/
+
+  ngOnInit(): void {/*
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
     this._quiz.quizzes().subscribe(
       (data:any)=>{
         this.quizzes=data;
@@ -48,7 +77,11 @@ export class ViewQuizzesComponent implements OnInit {
         console.log(error);
         Swal.fire('Error!','Error in loading data !','error');
       }
+<<<<<<< HEAD
     )
+=======
+    )*/
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
   }
    //
   
@@ -61,18 +94,32 @@ export class ViewQuizzesComponent implements OnInit {
     }).then((result)=>{
 
       if(result.isConfirmed)
+<<<<<<< HEAD
         {
           //delete
           this._quiz.deleteQuiz(idquiz).subscribe((data)=>{
             this.quizzes = this.quizzes.filter((quiz)=>quiz.qId!=idquiz) 
+=======
+        {/*
+          //delete
+          this._quiz.deleteQuiz(idquiz).subscribe((data)=>{
+            this.quizzes = this.quizzes.filter((quiz)=>quiz.idquiz!=idquiz) 
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
            Swal.fire('Success!',' Quiz deleted !','success');
             },
             (error: any)=>{
               Swal.fire('Error!','Error in deleting quiz !','error');
+<<<<<<< HEAD
             } );
+=======
+            } );*/
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
 
         }
     })
    }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
 }
