@@ -26,9 +26,11 @@ import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSelectModule } from '@angular/material/select';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { StartComponent } from './pages/user/start/start.component';
@@ -36,6 +38,8 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.component';
 
 @NgModule({
   declarations: [
@@ -50,11 +54,18 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     AddCategoryComponent,
     ViewQuizzesComponent,
     AddQuizComponent,
+
+    UpdateQuizComponent,
+    AddQuestionComponent,
+    ViewQuizQuestionsComponent,
+    LoadQuizComponent,
+      
     UpdateQuizComponent,  
     SidebarComponent,
      LoadQuizComponent, 
      InstructionsComponent, 
      StartComponent
+ SidebarUserComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +85,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatSlideToggleModule,
     MatSelectModule,
     MatProgressSpinnerModule
+
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],

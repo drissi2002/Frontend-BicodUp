@@ -1,6 +1,58 @@
-<<<<<<< HEAD
+
 <mat-card class="mb20">
-    <!--{{user | json}}-->
+<div class="container bootstrap snippets bootdey mt20">
+<div class="row">
+  <div class="profile-nav col-md-3">
+      <div class="panel">
+          <div class="user-heading round">
+              <a href="#">
+                  <img class="profile-image" src="../../../assets/drissi.png" alt="">
+              </a>
+              <h1>{{user.firstName}} {{user.lastName}}</h1>
+              <p>{{user.username}}</p>
+          </div>
+      </div>
+  </div>
+  <div class="profile-info col-md-9">
+      <div class="panel">
+          <div class="panel-body bio-graph-info">
+              <h1>Profile Details</h1>
+              <br>
+              <div class="row">
+                  <div class="bio-row">
+                      <h3> <b> First Name </b> : {{user.firstName}}</h3>
+                  </div>
+                  <div class="bio-row"> 
+                      <h3><b>Last Name </b> : {{user.lastName}} </h3>
+                  </div>
+                  <div class="bio-row">
+                      <h3><b>Phone </b> : {{user.phone}}</h3>
+                  </div>
+                  <div class="bio-row">
+                      <h3><b>Email</b> : {{user.email}}</h3>
+                  </div>
+                  <div class="bio-row">
+                      <h3><b>Role </b> : {{user.authorities[0].authority}}</h3>
+                  </div>
+                  <div class="bio-row">
+                      <h3><b>Status </b>: {{ user.enabled ? "ACTIVE" : "NOACTIVE" }}</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+       </div>
+</div>
+</div>
+<mat-card-actions class="text-center mb20">
+    <button mat-raised-button color="primary">Update
+    </button>
+    <button mat-raised-button color="accent">Share
+        </button>
+</mat-card-actions>
+
+</mat-card>
+<!--
+    {{user | json}}
     <mat-card-content>
         <h2 mat-subheader>Your profile details</h2>
 
@@ -9,17 +61,7 @@
             <div class="container text-center">
                 <img src="../../../assets/profile.png" class="responsive-img profile-image"/>
                 <h1 class="mt10">{{user.firstName}} {{user.lastName}}</h1>
-=======
-<mat-card>
-    <h1>Your profile details</h1>
-   
-    <mat-card-content>
-        <div class="bootstrap-wrapper ">
-            <div class="container">
-            <div class="container text-center">
-                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="responsive-img profile-image"/>
-                <h1 class="mt20">name</h1>
->>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
+
             </div>
             <div class="row">
                 <div class="col-md-10 offset-md-1" > 
@@ -29,11 +71,9 @@
                                         username
                                     </td>
                                     <td>
-<<<<<<< HEAD
+
                                         {{user.username}}
-=======
-                                        eya
->>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
+
                                     </td>
                                 </tr>
                                 <tr>
@@ -41,22 +81,17 @@
                                             examID
                                         </td>
                                         <td>
-<<<<<<< HEAD
+
                                             103
                                         </td>
                                     </tr>
                                 <tr *ngIf="user.phone">
-=======
-                                            100
-                                        </td>
-                                    </tr>
-                                    <tr>
->>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
+
                                     <td>
                                         phone
                                     </td>
                                     <td>
-<<<<<<< HEAD
+
                                         {{user.phone}}
                                     </td>   
                                 </tr>
@@ -84,30 +119,15 @@
                                     {{ user.enabled ? "ACTIVE" : "NOACTIVE" }}
                                 </td>   
                             </tr>
-=======
-                                        55149125
-                                    </td>
-                                </tr>
->>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
+
                               </table>
                 </div>
             </div>
         </div>
-        </div>
-    </mat-card-content>
-<<<<<<< HEAD
+
     <mat-card-actions class="text-center mb20">
         <button mat-raised-button color="primary">Update
         </button>
         <button mat-raised-button color="accent">Share
             </button>
     </mat-card-actions>
-=======
-    <mat-card-actions class="text-center">
-        <button mat-raised-button color="primary">UPDATE
-        </button>
-        <button mat-raised-button color="accent">share
-            </button>
-    </mat-card-actions>
-
->>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1

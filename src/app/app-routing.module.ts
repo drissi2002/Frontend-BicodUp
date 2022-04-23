@@ -14,9 +14,14 @@ import { AddCategoryComponent } from './pages/admin/add-category/add-category.co
 import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
 import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { StartComponent } from './pages/user/start/start.component';
+
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
+
 
 const routes: Routes = [
   {
@@ -66,18 +71,23 @@ const routes: Routes = [
     },{
       path:'quiz/:idquiz',
       component:UpdateQuizComponent,
+    },{
+      path:'view-questions/:idquiz/:title',
+      component:ViewQuizQuestionsComponent,
+    },{
+      path:'add-question/:idquiz/:title',
+      component:AddQuestionComponent,
     }
-
     ],
   },
   {
     path:'user-dashboard',
     component:UserDashboardComponent,
-    
     canActivate:[NormalGuard],
     children:[{
       path:':catId',
       component:LoadQuizComponent
+
     },{
       path:'instructions/:qid',
       component:InstructionsComponent
@@ -91,6 +101,7 @@ const routes: Routes = [
     canActivate:[NormalGuard]
   },
   
+
 ];
 
 @NgModule({

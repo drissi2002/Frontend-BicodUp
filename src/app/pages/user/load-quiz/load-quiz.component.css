@@ -6,6 +6,10 @@
     text-overflow: ellipsis
 }
 .example-header-image{
-    background-image: url("/assets/exam.jpg");
+    background-image: url("/assets/exam.png");
     background-size: cover;
+}
+
+h1 , h2 ,h3, button ,p , .fontStyle {
+    font-family: 'Poppins', sans-serif !important;
 }

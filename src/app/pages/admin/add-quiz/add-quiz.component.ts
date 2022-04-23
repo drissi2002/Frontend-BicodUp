@@ -16,6 +16,7 @@ import Swal from 'sweetalert2';
 export class AddQuizComponent implements OnInit {
 <<<<<<< HEAD
 
+
   categories=[
     { 
      cid:"23",

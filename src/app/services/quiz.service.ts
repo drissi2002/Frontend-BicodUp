@@ -8,9 +8,8 @@ import basUrl from './helper';
 export class QuizService {
 
      
-  /*addQuiz(question: { 
 
-     addQuiz(question: { 
+  public addQuestionQuiz(question: { 
 
        quiz: {}; 
        content: string; 
@@ -18,10 +17,10 @@ export class QuizService {
        option2: string;
        option3: string;
        option4: string;
-       answer: string; })*/
-  /*{
+       answer: string; })
+  {
     throw new Error('Method not implemented.');
-  }*/
+  }
 
   constructor(private _http:HttpClient) {}
     public quizzes(){
@@ -48,5 +47,10 @@ export class QuizService {
      
     }
 
-}
 
+    // get quizzes of category
+    public getQuizzesOfCategory(cid : any){
+      return this._http.get(`${basUrl}/quiz/category/${cid}`);
+    }
+
+}

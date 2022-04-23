@@ -1,9 +1,10 @@
-<h1 class="mt20"> Questions of {{qTitle}}</h1>
-<div class="bootstrap-wrap">
+
+<h2 class="mt20"> Questions of {{qTitle}}</h2>
+<div class="bootstrap-wrap mb20">
     <div class="row">
         <div class="col-md-12">
 
-            <div class="container text-center">
+            <div class="text-right">
                 <button 
                   mat-raised-button color="accent" 
                   [routerLink]="'/admin/add-question/'+ idquiz +'/' + qTitle">
@@ -15,7 +16,9 @@
 
                 <mat-card-content>
                     <p>
-                        <b> Q {{i + 1 }} </b>
+
+                        <b> Q {{i + 1 }} : </b>
+
                         <span class="ml20" [innerHTML]="q.content"></span>
                     </p>
 
@@ -35,7 +38,10 @@
                             <div class="col-md-6">
                                 <p> <b>4)</b> {{ q.option4}}</p>
                             </div>
-                        </div>
+
+                        </div>                        
+                        <br>
+
                         <mat-divider>
                             
                         </mat-divider>
@@ -45,12 +51,16 @@
                     </div>
                 </mat-card-content>
 
-                <mat-card-action>
-                    <button mat-button (click)="deleteQuestion(q.quesId)" color="warn">Delete</button>
-                    <button mat-button color="primary">Update</button>
-                </mat-card-action>
+
+                <mat-card-actions>
+                    <button mat-stroked-button (click)="deleteQuestion(q.quesId)" color="accent">Delete</button>
+                    <button mat-stroked-button color="primary">Update</button>
+                </mat-card-actions>
                
             </mat-card>
         </div>
     </div>
+
 </div>
+<!--{{questions |json}}-->
+
