@@ -12,6 +12,11 @@ export class QuestionService {
     
   ) { }
 
+  public getQuestionsOfQuizForTest(idquiz:any)
+  {  
+    return this._http.get(`${basUrl}/question/quiz/${idquiz}`);
+  }
+
   public getQuestionOfQuiz(idquiz:any)
   {  
     return this._http.get(`${basUrl}/question/quiz/${idquiz}`);
@@ -26,4 +31,10 @@ export class QuestionService {
   {  
     return this._http.delete(`${basUrl}/question/${questionId}`);
   }
+
+  //eval quiz
+  public evalQuiz(questions:any){
+    return this._http.post(`${basUrl}/question/eval-quiz`,questions);
+}
+
 }

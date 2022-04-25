@@ -1,6 +1,7 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +16,7 @@ import {HttpClientModule} from'@angular/common/http'
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -38,11 +40,13 @@ import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 
 import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.component';
-
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
+import { UserProfileComponent } from './pages/user/user-profile/user-profile.component';
+import { WelcomeUserComponent } from './pages/user/welcome-user/welcome-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +71,7 @@ import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.com
     LoadQuizComponent,
       
     UpdateQuizComponent,  
-    LoadQuizComponent, SidebarUserComponent
+    LoadQuizComponent, SidebarUserComponent, InstructionsComponent, StartComponent, UserProfileComponent, WelcomeUserComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +90,7 @@ import { SidebarUserComponent } from './pages/user/sidebar-user/sidebar-user.com
     MatListModule,
     MatSlideToggleModule,
     MatSelectModule,
-    CKEditorModule
+    MatProgressSpinnerModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

@@ -10,3 +10,22 @@ h1 , h2 , button ,p{
    font-family: 'Poppins', sans-serif !important;
 
 }
+.shape1 {
+   position: absolute;
+   z-index: 0;
+   width: 1000px;
+   bottom:-100px;
+   left: -15px;
+   opacity: 0.1;
+ }
+ 
+
+ @media screen and (max-width: 870px) {
+   .hamburger-menu {
+     display: flex;
+   }
+ .shape1 {
+   bottom: -180px;
+   left: -150px;
+ }
+}

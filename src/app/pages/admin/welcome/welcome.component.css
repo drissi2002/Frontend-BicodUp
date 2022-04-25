@@ -1,3 +1,224 @@
-h1 , h2 , button ,p{
+h1 , h2 , h3, h4,button ,p{
     font-family: 'Poppins', sans-serif !important;
 }
+
+
+caption {
+    padding-top: 20px;
+}
+    
+.example-card {
+    max-width: 100%;
+    padding: 30px;
+    padding-left: 60px;
+  }
+  
+.c-dashboardInfo {
+    font-family: 'Poppins', sans-serif !important;
+    margin-bottom: 15px;
+  }
+  .c-dashboardInfo .wrap {
+    font-family: 'Poppins', sans-serif !important;
+    background: #ffffff;
+    box-shadow: 2px 2px 4px rgba(14, 0, 0, 0.09);
+    border-radius: 7px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 25px 20px;
+    height: 100%;
+  }
+  .c-dashboardInfo__title,
+  .c-dashboardInfo__subInfo {
+    color: #6c6c6c;
+    font-size: 1.18em;
+    font-family: 'Poppins', sans-serif !important;
+  }
+  .c-dashboardInfo span {
+    display: block;
+  }
+  .c-dashboardInfo__count {
+    font-weight: 600;
+    font-size: 2.5em;
+    font-family: 'Poppins', sans-serif !important;
+    line-height: 64px;
+    color: #323c43;
+  }
+  .c-dashboardInfo .wrap:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    content: "";
+  }
+  
+
+  .c-dashboardInfo:nth-child(1) .wrap:after {
+    background: linear-gradient(82.59deg, #558ae5 0%, #558ae5 100%);
+  }
+  .c-dashboardInfo:nth-child(2) .wrap:after {
+    background: linear-gradient(81.67deg, #f88f9f 0%, #f88f9f 100%);
+  }
+  .c-dashboardInfo:nth-child(3) .wrap:after {
+    background: linear-gradient(69.83deg, #558ae5 0%, #558ae5 100%);
+  }
+  .c-dashboardInfo:nth-child(4) .wrap:after {
+    background: linear-gradient(81.67deg, #f88f9f 0%, #f88f9f 100%);
+  }
+  .c-dashboardInfo__title svg {
+    color: #d7d7d7;
+    margin-left: 5px;
+  }
+  .MuiSvgIcon-root-19 {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif !important;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    user-select: none;
+    flex-shrink: 0;
+  }
+  
+  
+  body, html {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "fira-sans-2", Verdana, sans-serif;
+  }
+  #q-graph {
+    display: block;
+    /* fixes layout wonkiness in FF1.5 */
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: 1.1em 0 0;
+    padding: 0;
+    background: transparent;
+    font-size: 11px;
+  }
+  #q-graph caption {
+    caption-side: top;
+    width: 600px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    top: -40px;
+    position: relative;
+    z-index: 10;
+    font-weight: bold;
+  }
+  #q-graph tr, #q-graph th, #q-graph td {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  #q-graph td {
+    transition: all 0.3s ease;
+  }
+  #q-graph td:hover {
+    background-color: #656363;
+    opacity: 0.9;
+    color: white;
+  }
+  #q-graph thead tr {
+    left: 100%;
+    top: 50%;
+    bottom: auto;
+    margin: -2.5em 0 0 5em;
+  }
+  #q-graph thead th {
+    width: 7.5em;
+    height: auto;
+    padding: 0.5em 1em;
+  }
+  #q-graph thead th.sent {
+    top: 0;
+    left: 0;
+    line-height: 2;
+  }
+  #q-graph thead th.paid {
+    top: 2.75em;
+    line-height: 2;
+    left: 0;
+  }
+  #q-graph tbody tr {
+    height: 296px;
+    padding-top: 2px;
+    border-right: 1px dotted #C4C4C4;
+    color: rgb(255, 255, 255);
+  }
+  #q-graph #q1 {
+    left: 0;
+  }
+  #q-graph #q2 {
+    left: 150px;
+  }
+  #q-graph #q3 {
+    left: 300px;
+  }
+  #q-graph #q4 {
+    left: 450px;
+    border-right: none;
+  }
+  #q-graph tbody th {
+    bottom: -1.75em;
+    vertical-align: top;
+    font-weight: normal;
+    color: #333;
+  }
+  #q-graph .bar {
+    width: 60px;
+    border: 1px solid;
+    border-bottom: none;
+    color: rgb(0, 0, 0);
+  }
+  #q-graph .bar p {
+    margin: 5px 0 0;
+    padding: 0;
+    opacity: 0.4;
+  }
+  #q-graph .sent {
+    left: 13px;
+    background-color: #ffa0af;
+    border-color: transparent;
+  }
+  #q-graph .paid {
+    left: 77px;
+    background-color: #85b0f8 ;
+    border-color: transparent;
+  }
+  #ticks {
+    position: relative;
+    top: -300px;
+    left: 2px;
+    width: 596px;
+    height: 300px;
+    z-index: 1;
+    margin-bottom: -300px;
+    font-size: 10px;
+    font-family: "fira-sans-2", Verdana, sans-serif;
+  }
+  #ticks .tick {
+    position: relative;
+    border-bottom: 1px dotted #000000;
+    width: 600px;
+  }
+  #ticks .tick p {
+    position: absolute;
+    left: -5em;
+    top: -0.8em;
+    margin: 0 0 0 0.5em;
+  }
+  
