@@ -25,7 +25,7 @@ catId:any;
 
         if(this.catId==0){
           console.log("load all the quiz");
-          this._quiz.quizzes().subscribe(
+          this._quiz.getActiveQuizzes().subscribe(
             (data:any)=>{
               this.quizzes=data;
               console.log(this.quizzes);
@@ -37,7 +37,7 @@ catId:any;
           );
         }else{
           console.log("load specific quiz")
-          this._quiz.getQuizzesOfCategory(this.catId).subscribe(
+          this._quiz.getActiveQuizzesOfCategory(this.catId).subscribe(
             (data:any)=>{
               this.quizzes=data;
               console.log(this.quizzes);

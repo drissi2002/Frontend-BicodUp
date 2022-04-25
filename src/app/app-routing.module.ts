@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -21,6 +21,10 @@ import { StartComponent } from './pages/user/start/start.component';
 
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
+import { UserProfileComponent } from './pages/user/user-profile/user-profile.component';
+import { WelcomeUserComponent } from './pages/user/welcome-user/welcome-user.component';
 
 
 const routes: Routes = [
@@ -84,24 +88,29 @@ const routes: Routes = [
     path:'user-dashboard',
     component:UserDashboardComponent,
     canActivate:[NormalGuard],
-    children:[{
+    children:[
+      {
+        path:'',
+        component: WelcomeUserComponent,
+      },
+      {
+        path:'user-profile',
+        component: UserProfileComponent,
+      },
+      {
       path:':catId',
       component:LoadQuizComponent
-
     },{
       path:'instructions/:qid',
       component:InstructionsComponent
-    },
-    
-  ],
-  }, 
-  {
+    }
+  ]
+  },{
     path:'start/:qid',
     component:StartComponent,
     canActivate:[NormalGuard]
-  },
-  
-
+  }
+   
 ];
 
 @NgModule({

@@ -1,1 +1,105 @@
-<h1>welcome to ADMIN dashboard </h1>
+<div id="root">
+    <div class="container pt-5">
+      <div class="row align-items-stretch">
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap">
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Total Users accounts<svg
+                class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z">
+                </path>
+              </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">1500</span>
+          </div>
+        </div>
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap">
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Active accounts<svg
+                class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z">
+                </path>
+              </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">600</span><span
+              class="hind-font caption-12 c-dashboardInfo__subInfo">Last month: 70</span>
+          </div>
+        </div>
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap">
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Average of Marks<svg
+                class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z">
+                </path>
+              </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">45%</span>
+          </div>
+        </div>
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap">
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">Available funds<svg
+                class="MuiSvgIcon-root-19" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z">
+                </path>
+              </svg></h4><span class="hind-font caption-12 c-dashboardInfo__count">2000 DT </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+
+<div class="container text-center mb20">
+<mat-card class="example-card mb20 text-center">
+<mat-card-content>
+    <div class="row mb20">
+        <div  class="col-md-8 offset-md-2">
+    <table id="q-graph">
+        <thead>
+        <caption >Ative/Inactive accounts in last 4 months</caption>
+        <tr>
+        <th></th>
+        <th class="sent">Active</th>
+        <th class="paid">Inactive</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="qtr" id="q1">
+        <th scope="row">FEV</th>
+        <td class="sent bar" style="height: 111px;"><p>180</p></td>
+        <td class="paid bar" style="height: 99px;"><p>160</p></td>
+        </tr>
+        <tr class="qtr" id="q2">
+        <th scope="row">MAR</th>
+        <td class="sent bar" style="height: 206px;"><p>348</p></td>
+        <td class="paid bar" style="height: 194px;"><p>322</p></td>
+        </tr>
+        <tr class="qtr" id="q3">
+        <th scope="row">AVR</th>
+        <td class="sent bar" style="height: 259px;"><p>400</p></td>
+        <td class="paid bar" style="height: 193px;"><p>320</p></td>
+        </tr>
+        <tr class="qtr" id="q4">
+        <th scope="row">MAI</th>
+        <td class="sent bar" style="height: 110px;"><p>180</p></td>
+        <td class="paid bar" style="height: 195px;"><p>300</p></td>
+        </tr>
+        </tbody>
+        </table>
+        
+        <div id="ticks">
+        <div class="tick" style="height: 59px;"><p>500</p></div>
+        <div class="tick" style="height: 59px;"><p>400</p></div>
+        <div class="tick" style="height: 59px;"><p>300</p></div>
+        <div class="tick" style="height: 59px;"><p>200</p></div>
+        <div class="tick" style="height: 59px;"><p>100</p></div>
+        </div>
+    </div>
+</div>
+
+</mat-card-content>
+</mat-card>
+</div>

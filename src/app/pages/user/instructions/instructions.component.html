@@ -2,6 +2,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
+          <mat-card class=" fontStyle mb20">
+             <mat-card-header>
+                  <!-- heading -->
+                  <mat-card-title class="mt10">
+                    <i>Read the instructions of this page carefully</i>
+
           <mat-card class="mt20">
              <mat-card-header>
                   <!-- heading -->
@@ -13,6 +19,10 @@
                   </mat-card-subtitle>
              </mat-card-header>
 
+             <mat-card-content class="ml20 fontStyle">
+                  <!-- content -->
+                  <h1> <b>{{ quiz.title }}</b> </h1>
+
              <mat-card-content class="ml20">
                   <!-- content -->
                   <h1> {{ quiz.title }} </h1>
@@ -20,7 +30,7 @@
                   <mat-divider>
                   <br/> 
                   </mat-divider>
-                  <h1>Important Instructions </h1>
+                  <h2>Important Instructions </h2>
 
                   <ul>
                       <li>This quiz is only for practice purpose.</li>
@@ -39,7 +49,7 @@
                   </ul>
                   <mat-divider></mat-divider>
                   <br/>
-                  <h1>Attempting Quiz</h1>
+                  <h2>Attempting Quiz</h2>
                   <ul>
                       <li> Click <b> Start Quiz </b> button to start the quiz .</li >
                       <li> The time will start the moment you click the Start quiz button.</li>
@@ -54,9 +64,10 @@
                 <!-- action -->
                 <button 
                  (click)="startQuiz()"
-                  class="" 
-                  mat-raised-button color="primary" 
-                >Start Quiz</button>
+                  class="mb20" 
+                  mat-raised-button color="accent"         
+                  >Start Quiz</button>
+
 
            </mat-card-actions>
 
@@ -66,3 +77,5 @@
       </div>
     </div>
 </div>
+
+

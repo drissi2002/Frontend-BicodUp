@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./instructions.component.css']
 })
 export class InstructionsComponent implements OnInit {
+
   qid:any;
   quiz:any;
 

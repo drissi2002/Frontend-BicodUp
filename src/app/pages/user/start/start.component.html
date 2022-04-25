@@ -3,16 +3,31 @@
         <div class="row">
             <div class="col-md-2">
                 <!-- instructions -->
-                <h3>instructions</h3>
+                    <mat-card style="margin-top: 70px " class="fontStyle"> 
+                        <mat-card-header>
+                            <mat-card-title> Instructions </mat-card-title>
+                            <mat-card-subtitle>
+                                Read carefully these instructions 
+                            </mat-card-subtitle>        
+                        </mat-card-header>
+                            
+                        <mat-card-content>
+                            <p> <b> ></b> Do not refresh the page otherwise you will get new questions</p>
+                            <p> <b> ></b> Do not switch the tabs</p>
+                            <p> <b> ></b> Do not minimize the window</p>
+                        </mat-card-content>
+                    </mat-card>
+
             </div>
             <div class="col-md-8">
                 <!-- questions -->
                 <ng-container *ngIf="questions">
                     <h1 class="mt20">On Going Quiz <b>{{ questions [0].quiz.title}}</b></h1>
                 </ng-container>
-                <mat-card *ngFor='let q of questions ; let i=index;'   class="mt10">
+                <mat-card *ngFor='let q of questions ; let i=index;'   class="mt10 fontStyle">
                     
-                    <mat-card-content>
+                    <mat-card-content class="fontStyle">
+
                         <p>
                             <b>Q {{ i + 1}}) </b> 
                             <span class="ml10" [innerHTML]="q.content"></span>
@@ -77,7 +92,8 @@
             </div>
             <div class="col-md-2">
                 <!-- progress -->
-                <mat-card style="margin-top: 70px"> 
+                <mat-card style="margin-top: 70px " class="fontStyle"> 
+
                     <mat-card-header>
                         <mat-card-title> Progress </mat-card-title>
                         <mat-card-subtitle>
@@ -87,6 +103,7 @@
                     </mat-card-header>
                         
                     <mat-card-content>
+
                         <h1 class="text-center">{{getFormattedTime()}}</h1>
                          <mat-spinner 
                          color="accent" 
@@ -94,6 +111,7 @@
                          mode="determinate"
                          [value]=" (timer / (this.questions.length * 2 * 60))*100"
                           ></mat-spinner>
+
                     </mat-card-content>
                 </mat-card>
                     
@@ -106,28 +124,53 @@
 <div class="bootstrap-wrapper" *ngIf="isSubmit">
     <div class="row mt20" >
         <div class="col-md-6 offset-md-3">
-            <mat-card>
-
-                <mat-card-header>
-                    <mat-card-title>
-                        Quiz Result
+            <!--<mat-card class="fontStyle card-container">
+                <mat-card-header class="text-center mt20">
+                    <mat-card-title class="card-title">
+                        <b>Quiz Result : </b>
                     </mat-card-title>
                 </mat-card-header>
-                <mat-card-content class="text-center">
-                    <h1>Marks Got :{{marksGot}}</h1>
-                    <h1>Correct Answers : {{ correctAnswers }}</h1>
-                    <h1>Questions Attempted : {{ attempted}}</h1>
+                <mat-card-content class="text-center">                   
+                    <h2>Marks Got :<b>{{marksGot}}</b></h2>
+                    <h2>Correct Answers :<b> {{ correctAnswers }}</b></h2>
+                    <h2>Questions Attempted :<b> {{ attempted}}</b></h2>
                 </mat-card-content>
-                <mat-card-actions  class="text-center">
-                    <button  mat-raised-button color="primary">Print</button>
-                    <button  mat-raised-button
-                       color="accent"
-                       [routerLink]="'/user-dashboard/0'"
-                     >Home</button>
+                <br>
+                <mat-card-actions  class="text-center mb20">
+                    <button  mat-stroked-button color="primary" (click)="printPage()"
+                    >Print</button>
+                    <button  mat-stroked-button color="accent" [routerLink]="'/user-dashboard/0'">Home</button>
                 </mat-card-actions>
-            </mat-card>
-
+            </mat-card>-->
+            <div class="container1 fontStyle card-container">
+                <div class="parent">
+                  <div class="wave-card">
+                <mat-card-header class="text-center mb20">
+                    <mat-card-title class="card-title">
+                        <b>Quiz Result : </b>
+                    </mat-card-title>
+                    <br><br>
+                </mat-card-header>
+                 
+                <div class="wave-card-shape"></div>
+                <div class="wave-card-shape"></div>
+                <div class="wave-card-shape"></div>
+                <mat-card-content class="text-center colorst">                   
+                    <h2><i>Marks Got :</i><b> {{ marksGot }}</b></h2>
+                    <h2><i>Correct Answers :</i><b> {{ correctAnswers }}</b></h2>
+                    <h2><i>Questions Attempted :</i><b> {{ attempted}}</b></h2>
+                </mat-card-content>
+                <br>
+                <mat-card-actions  class="text-center mb20">
+                    <button  mat-stroked-button color="primary" (click)="printPage()"
+                    >Print</button>
+                    <button  mat-stroked-button color="accent" [routerLink]="'/user-dashboard/0'">Home</button>
+                </mat-card-actions>
+            
+                  </div>
+                </div>
+              </div>
+            
         </div>
     </div>
-
 </div>
