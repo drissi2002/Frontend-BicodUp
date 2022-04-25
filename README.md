@@ -5,7 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 As part of our Development Platforms project within the National School of Engineers of Carthage (ENICARTHAGE), we are led to develop a web application under the theme of E-learning. This project represents an opportunity that put into practice the theoretical knowledge acquired during our training and develop them..
 
-### Preview 
+## Preview
+#### the Frontend part - Angular
 <p align="center">
   <img src="https://i.imgur.com/ewbKcWU.png"  alt="accessibility text">
 </p>
