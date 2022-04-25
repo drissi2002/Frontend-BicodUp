@@ -1,3 +1,4 @@
+
 <h2 class="mt20"> Questions of {{qTitle}}</h2>
 <div class="bootstrap-wrap mb20">
     <div class="row">
@@ -15,7 +16,9 @@
 
                 <mat-card-content>
                     <p>
+
                         <b> Q {{i + 1 }} : </b>
+
                         <span class="ml20" [innerHTML]="q.content"></span>
                     </p>
 
@@ -35,8 +38,10 @@
                             <div class="col-md-6">
                                 <p> <b>4)</b> {{ q.option4}}</p>
                             </div>
+
                         </div>                        
                         <br>
+
                         <mat-divider>
                             
                         </mat-divider>
@@ -46,6 +51,7 @@
                     </div>
                 </mat-card-content>
 
+
                 <mat-card-actions>
                     <button mat-stroked-button (click)="deleteQuestion(q.quesId)" color="accent">Delete</button>
                     <button mat-stroked-button color="primary">Update</button>
@@ -54,5 +60,7 @@
             </mat-card>
         </div>
     </div>
+
 </div>
 <!--{{questions |json}}-->
+

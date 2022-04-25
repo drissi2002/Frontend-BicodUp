@@ -6,8 +6,11 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+<<<<<<< HEAD
    // "noImplicitOverride": true,
    "noPropertyAccessFromIndexSignature": false,
+=======
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -19,7 +22,11 @@
     "target": "es2017",
     "module": "es2020",
     "lib": [
+<<<<<<< HEAD
       "es2020",
+=======
+      "es2018",
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
       "dom"
     ]
   },
@@ -27,7 +34,12 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
+<<<<<<< HEAD
     "strictTemplates": true,
     //"strictNullChecks":false,
+=======
+    "strictTemplates": true
+  
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
   }
 }

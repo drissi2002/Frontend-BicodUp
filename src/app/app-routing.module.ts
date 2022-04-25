@@ -16,12 +16,16 @@ import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
 
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
+
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { StartComponent } from './pages/user/start/start.component';
 import { UserProfileComponent } from './pages/user/user-profile/user-profile.component';
 import { WelcomeUserComponent } from './pages/user/welcome-user/welcome-user.component';
+
 
 const routes: Routes = [
   {
@@ -106,10 +110,12 @@ const routes: Routes = [
     component:StartComponent,
     canActivate:[NormalGuard]
   }
+   
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppRoutingModule { }

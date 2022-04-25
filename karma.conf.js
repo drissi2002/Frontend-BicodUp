@@ -25,7 +25,9 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/bicodupfront'),
+
+      dir: require('path').join(__dirname, './coverage/bicodup-front'),
+
       subdir: '.',
       reporters: [
         { type: 'html' },

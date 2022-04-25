@@ -50,5 +50,4 @@ export class InstructionsComponent implements OnInit {
 
     })
  }
-
 }

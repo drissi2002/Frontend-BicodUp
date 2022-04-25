@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 import { QuizService } from 'src/app/services/quiz.service';
 import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-update-quiz',
@@ -11,6 +13,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./update-quiz.component.css']
 })
 export class UpdateQuizComponent implements OnInit {
+
   categories=[
     { cid:23,
      title:'Programming'
@@ -19,7 +22,7 @@ export class UpdateQuizComponent implements OnInit {
      title:'Gaming'
     }
    ]
-
+  
 
   constructor(
     private _route:ActivatedRoute ,
@@ -57,6 +60,31 @@ export class UpdateQuizComponent implements OnInit {
       }
     );
   }
+
+  categories=[
+    { cid:23,
+     title:'Programming'
+    },
+    { cid:25,
+     title:'Gaming'
+    }
+   ]
+
+
+  /*constructor(
+    private _route:ActivatedRoute ,
+     private _quiz:QuizService , 
+     private _cat:CategoryService,
+     private _router:Router)
+    { }*/
+  
+
+  idquiz=0;
+  quiz:any;
+
+  
+  }
+  
   
   //update form submit
   public updateData(){
@@ -71,13 +99,16 @@ export class UpdateQuizComponent implements OnInit {
      this._quiz.updateQuiz(this.quiz).subscribe(
        (data)=>{
        Swal.fire("Success",'quiz updated !', 'success').then((e)=>{
+
          this._router.navigate(['/admin/quizzes']);
        });
      },(error:any)=>{
       Swal.fire('Error','error in updating quiz','error');
       console.log(error);
+
     });
   }
+
 
 
 }

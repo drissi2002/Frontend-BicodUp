@@ -1,18 +1,28 @@
+<<<<<<< HEAD
 <div class="text-right mr20">
     <button routerLink="/admin/add-quiz" mat-raised-button color="accent">Add Quiz</button>
 </div>
 <mat-card class="mt20 mr20 ml20 mb20" *ngFor="let quiz of quizzes">
     <mat-card-header class="stylefont">
+=======
+<mat-card class="mt20 mr20 ml20" *ngFor="let quiz of quizzes">
+    <mat-card-header>
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{quiz.title}}</mat-card-title>
         <mat-card-subtitle>{{quiz.category.title}}</mat-card-subtitle>
         </mat-card-header>
         
+<<<<<<< HEAD
     <mat-card-content class="stylefont">
+=======
+    <mat-card-content>
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
     <p>{{quiz.description}}</p>
     </mat-card-content>
     <mat-card-actions>
         <button 
+<<<<<<< HEAD
         [routerLink]="'/admin/view-questions/'+quiz.qId+'/'+ quiz.title"
         mat-stroked-button color="primary">
             View Questions
@@ -23,8 +33,27 @@
         <button [routerLink]="'/admin/quiz/' + quiz.qId " mat-flat-button color="primary" class="ml20">Update</button>
         <button mat-stroked-button color="primary" class="ml20">Attempts</button>
         <button mat-flat-button color="accent" class="ml20" (click)="deleteQuiz(quiz.qId)">
+=======
+        [routerLink]="'/admin/view-questions/'+quiz.idquiz+'/'+ quiz.title"
+         mat-flat-button color="accent">
+            Questions
+        </button>
+
+        <button mat-stroked-button color="accent" class="ml20">Max Marks : {{quiz.maxMarks}}</button>
+        <button mat-stroked-button color="accent" class="ml20">Questions: {{quiz.nbrquestion}}</button>
+        <button [routerLink]="'/admin/quiz/' + quiz.idquiz " mat-flat-button color="accent" class="ml20">Update</button>
+        <button mat-flat-button color="accent" class="ml20">Attempts</button>
+        <button mat-flat-button color="warn" class="ml20" (click)="deleteQuiz(quiz.idquiz)">
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1
             Delete
         </button>
 
     </mat-card-actions>
+<<<<<<< HEAD
 </mat-card >
+=======
+</mat-card>
+<div class="container text-center mt20">
+    <button routerLink="/admin/add-quiz" mat-raised-button color="accent">Add Quiz</button>
+</div>
+>>>>>>> c7f37e7fe776a1a9640b085c2638c089352d96c1

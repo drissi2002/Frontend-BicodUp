@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuestionService } from 'src/app/services/question.service';
 import { LocationStrategy } from '@angular/common';
+
 import Swal from 'sweetalert2';
 
 @Component({
@@ -113,6 +114,4 @@ export class StartComponent implements OnInit {
    printPage(){
     window.print();
   }
- 
-
 }
