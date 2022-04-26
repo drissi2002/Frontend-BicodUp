@@ -9,7 +9,7 @@ As part of our Development Platforms project within the National School of Engin
 ## Preview
 #### the Frontend part - Angular
 <p align="center">
-  <img src="https://i.imgur.com/ewbKcWU.png"  alt="accessibility text">
+  <img src="https://i.imgur.com/AKe0AvQ.png"  alt="accessibility text">
 </p>
 
 ## Development server
